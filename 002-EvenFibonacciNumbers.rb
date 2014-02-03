@@ -3,3 +3,20 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+
+current = 2
+previous = 1
+sum = 0
+
+def next_fibonacci_number(current, previous)
+  current + previous
+end
+
+until current >= 4000000
+  sum += current if current.even?
+  next_number = next_fibonacci_number(current, previous)
+  previous = current
+  current = next_number
+end
+
+puts "The sum is #{sum}."
