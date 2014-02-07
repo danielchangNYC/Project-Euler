@@ -8,4 +8,4 @@
 
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
-puts ((101*50)^2) - (1..100).inject(1){ |result, n| result + n^2}
+puts ((101*50)**2) - (1..100).inject(0){ |result, n| (n**2) + result}
